@@ -1,2 +1,2 @@
-# Healthify
+# Healthify lab
 Healthify lab
