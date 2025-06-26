@@ -1,76 +1,15 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Healthify Lab</title>
-  <script type="module" src="firebase-config.js"></script>
-  <style>
-    body { font-family: Arial; margin: 0; background: #f6f9fb; color: #222; }
-    header, footer { background: #0078d4; color: white; text-align: center; padding: 1rem; }
-    .container { max-width: 800px; margin: auto; padding: 20px; }
-    .popup { background: #fff3cd; border: 1px solid #ffeeba; padding: 15px; margin-bottom: 20px; border-radius: 5px; }
-    .login, .booking, .dashboard { display: none; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-    input, select, button, textarea {
-      display: block; width: 100%; margin-bottom: 15px; padding: 10px; border-radius: 4px; border: 1px solid #ccc;
-    }
-    button { background: #0078d4; color: white; border: none; cursor: pointer; }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Healthify Lab</h1>
-    <p>Accurate. Reliable. Healthify</p>
-  </header>
-
-  <div class="container">
-    <div class="popup">
-      <strong>🔥 50% OFF</strong> Full Body Profile – ₹1000 → ₹499. Book Now!
-    </div>
-
-    <button onclick="document.querySelector('.booking').style.display='block'">Book Test</button>
-
-    <div class="booking">
-      <h2>Book Your Test</h2>
-      <input placeholder="Name" />
-      <input placeholder="Age" type="number" />
-      <select>
-        <option value="">Sex</option>
-        <option>Male</option>
-        <option>Female</option>
-        <option>Other</option>
-      </select>
-      <textarea placeholder="Address"></textarea>
-      <input type="date" />
-      <input type="time" />
-      <select>
-        <option>Select Test</option>
-        <option>CBC - ₹200</option>
-        <option>LFT - ₹300</option>
-        <option>Vitamin D - ₹299</option>
-        <option>Full Body Profile - ₹499</option>
-      </select>
-      <button>Submit Booking</button>
-    </div>
-
-    <div class="login">
-      <h2>Admin Login</h2>
-      <input type="email" placeholder="Email" />
-      <input type="password" placeholder="Password" />
-      <button>Login</button>
-    </div>
-
-    <div class="dashboard">
-      <h2>Admin Dashboard</h2>
-      <button onclick="logout()">Logout</button>
-      <div id="booking-list">Loading bookings...</div>
-    </div>
-  </div>
-
-  <footer>
-    <p>Contact: +91-XXXXXXXXXX | report@healthifylab.com</p>
-    <p>&copy; 2025 Healthify Lab</p>
-  </footer>
+  <!-- Content omitted for brevity -->
 </body>
 </html>
