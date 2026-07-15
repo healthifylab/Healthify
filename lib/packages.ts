@@ -39,8 +39,8 @@ export const packages: LabPackage[] = [
 
 export const contact = {
   phone1: "+91 95038 32889",
-  phone2: "+91 75065 43210",
+  phone2: "+91 9373252889,
   whatsapp: "919503832889",
-  email: "care@healthifylab.com",
+  email: "report@healthifylab.com",
   locations: ["Mumbai", "Navi Mumbai", "Thane", "Kalyan", "Pune"]
 };
