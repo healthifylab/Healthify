@@ -29,6 +29,10 @@ const faqs = [
     q: 'Can I access my reports online?',
     a: 'Absolutely. Once ready, your reports are delivered digitally. You can also access them anytime through the Patient Portal.',
   },
+  {
+    q: 'Do you offer AI-based test recommendations?',
+    a: 'Yes. Use our AI Symptom Checker on the Packages page for personalized suggestions.',
+  },
 ];
 
 function FaqItem({ faq, isOpen, onToggle }: { faq: typeof faqs[0]; isOpen: boolean; onToggle: () => void }) {
@@ -62,6 +66,7 @@ function FaqItem({ faq, isOpen, onToggle }: { faq: typeof faqs[0]; isOpen: boole
 
 export default function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+
   return (
     <section id="faq" className="relative py-20 lg:py-28">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
@@ -72,9 +77,7 @@ export default function Faq() {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-emerald-400">
-            FAQ
-          </p>
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-emerald-400">FAQ</p>
           <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
             Frequently Asked Questions
           </h2>
@@ -94,11 +97,3 @@ export default function Faq() {
     </section>
   );
 }
-// Same as before but with better mobile spacing and one extra FAQ
-const faqs = [
-  // ... your existing faqs
-  {
-    q: 'Do you offer AI-based test recommendations?',
-    a: 'Yes. Use our AI Symptom Checker on the Packages page for personalized suggestions.',
-  },
-];
