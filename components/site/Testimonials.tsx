@@ -1,29 +1,35 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Star, Quote } from 'lucide-react';
+import { Star, Quote, Play } from 'lucide-react';
 
 const testimonials = [
   {
-    name: 'Ramesh',
-    age: '60',
-    location: 'Mumbai',
-    text: 'Healthify Lab made my health checkup so convenient at home. Highly satisfied!',
-    initials: 'R',
+    name: 'Ramesh Sharma',
+    age: '62',
+    location: 'Andheri West, Mumbai',
+    text: 'Healthify made my health checkup so easy. The phlebotomist came on time and reports were fast.',
+    initials: 'RS',
+    rating: 5,
+    type: 'text'
   },
   {
-    name: 'Priya',
-    age: '35',
-    location: 'Navi Mumbai',
-    text: 'The team was professional, and the results were delivered quickly in Navi Mumbai!',
-    initials: 'P',
+    name: 'Priya Patel',
+    age: '34',
+    location: 'Nerul, Navi Mumbai',
+    text: 'Excellent service! Got my diabetes panel done at home. Highly recommended.',
+    initials: 'PP',
+    rating: 5,
+    type: 'text'
   },
   {
-    name: 'Anil',
-    age: '45',
+    name: 'Anil Verma',
+    age: '48',
     location: 'Thane',
-    text: 'Great service in Thane. Made managing my health so much easier!',
-    initials: 'A',
+    text: 'Professional team and accurate reports. Saved me a lot of time.',
+    initials: 'AV',
+    rating: 5,
+    type: 'text'
   },
 ];
 
@@ -35,48 +41,51 @@ export default function Testimonials() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mx-auto max-w-2xl text-center"
+          className="text-center mb-12"
         >
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-emerald-400">
-            Testimonials
-          </p>
-          <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
-            What Our Patients Say
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-emerald-400">REAL STORIES</p>
+          <h2 className="mt-3 font-display text-4xl md:text-5xl font-bold text-white">
+            Loved by Mumbai Families
           </h2>
         </motion.div>
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-3">
           {testimonials.map((t, i) => (
             <motion.div
-              key={t.name}
-              initial={{ opacity: 0, y: 30 }}
+              key={i}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="glass relative overflow-hidden rounded-2xl p-7"
+              transition={{ delay: i * 0.1 }}
+              className="glass rounded-3xl p-8 relative"
             >
-              <Quote className="absolute right-4 top-4 h-12 w-12 text-white/5" />
-              <div className="flex gap-1">
-                {Array.from({ length: 5 }).map((_, j) => (
-                  <Star key={j} className="h-4 w-4 fill-amber-400 text-amber-400" />
+              <Quote className="absolute right-6 top-6 h-10 w-10 text-white/10" />
+
+              <div className="flex gap-1 mb-6">
+                {Array.from({ length: t.rating }).map((_, j) => (
+                  <Star key={j} className="h-5 w-5 fill-amber-400 text-amber-400" />
                 ))}
               </div>
-              <p className="mt-5 text-base leading-relaxed text-slate-200">
-                &ldquo;{t.text}&rdquo;
+
+              <p className="text-lg leading-relaxed text-slate-200 mb-8">
+                “{t.text}”
               </p>
-              <div className="mt-6 flex items-center gap-3">
-                <div className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-emerald-400 to-teal-600 font-display text-lg font-bold text-emerald-950">
+
+              <div className="flex items-center gap-4">
+                <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-emerald-400 to-teal-600 flex items-center justify-center text-xl font-bold text-black">
                   {t.initials}
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-white">{t.name}, {t.age}</p>
-                  <p className="text-xs text-slate-400">{t.location}</p>
+                  <p className="font-semibold text-white">{t.name}, {t.age}</p>
+                  <p className="text-sm text-slate-400">{t.location}</p>
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
+
+        <p className="text-center text-sm text-slate-500 mt-12">
+          Want to share your experience? Email us at care@healthifylab.com
+        </p>
       </div>
     </section>
   );
