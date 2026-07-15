@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Shield, AlertTriangle, Info, BookOpen } from 'lucide-react';
+import { Search, BookOpen } from 'lucide-react';
 
 const diseases = [
   {
@@ -63,7 +63,7 @@ export default function DiseaseLibrary() {
     return matchesSearch && matchesType;
   });
 
-  const types = ['All', ...new Set(diseases.map(d => d.type))];
+  const types = ['All', ...Array.from(new Set(diseases.map(d => d.type)))];
 
   return (
     <section className="relative py-20 bg-black/40" id="disease-library">
@@ -77,11 +77,10 @@ export default function DiseaseLibrary() {
             Disease &amp; Virus Library
           </h2>
           <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-            Understand common conditions and get the right tests recommended by our experts
+            Understand common conditions and get the right tests recommended
           </p>
         </div>
 
-        {/* Search & Filters */}
         <div className="flex flex-col md:flex-row gap-4 mb-10">
           <div className="relative flex-1">
             <Search className="absolute left-4 top-4 h-5 w-5 text-slate-400" />
