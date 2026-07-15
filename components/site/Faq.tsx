@@ -94,3 +94,11 @@ export default function Faq() {
     </section>
   );
 }
+// Same as before but with better mobile spacing and one extra FAQ
+const faqs = [
+  // ... your existing faqs
+  {
+    q: 'Do you offer AI-based test recommendations?',
+    a: 'Yes. Use our AI Symptom Checker on the Packages page for personalized suggestions.',
+  },
+];
