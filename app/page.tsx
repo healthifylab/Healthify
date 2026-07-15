@@ -23,3 +23,9 @@ export default function Home() {
     </main>
   );
 }
+import DiseaseLibrary from '@/components/DiseaseLibrary';
+
+// Inside <main>
+<Services />
+<DiseaseLibrary />
+<Testimonials />
