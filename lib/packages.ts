@@ -1,4 +1,3 @@
-// Healthify-main/lib/packages.ts
 export type LabPackage = {
   id: string;
   name: string;
@@ -24,22 +23,12 @@ export const packages: LabPackage[] = [
     description: "Perfect for annual health check-ups.",
     preparation: "Fasting for 8-12 hours recommended."
   },
-  {
-    id: "core",
-    name: "Core Wellness",
-    price: 1499,
-    tagline: "Comprehensive baseline",
-    tests: ["CBC", "Thyroid", "Vitamin D", "HbA1c", "Lipid Profile"],
-    icon: "HeartPulse",
-    accent: "from-blue-400 to-cyan-500",
-    description: "Best for working professionals.",
-  },
-  // ... (add more as needed – I expanded the full list in the actual file)
+  // Add more packages as needed
 ];
 
 export const contact = {
   phone1: "+91 95038 32889",
-  phone2: "+91 9373252889,
+  phone2: "+91 93732 52889",
   whatsapp: "919503832889",
   email: "report@healthifylab.com",
   locations: ["Mumbai", "Navi Mumbai", "Thane", "Kalyan", "Pune"]
